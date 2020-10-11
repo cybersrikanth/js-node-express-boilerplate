@@ -4,7 +4,7 @@ import { Hasher } from "../utils/Hasher";
 
 const schema = {
     create: yup.object({
-        email: yup.string().email().required(),
+        email: yup.string().lowercase().email().required(),
         password: yup.string().min(8).max(40).required(),
         name: yup.string().min(3).max(25).required(),
     }),
